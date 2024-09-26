@@ -4,6 +4,7 @@ import { Poppins } from "next/font/google";
 import type { Metadata } from "next";
 
 import ThemeProvider from "@/components/theme-provider";
+import { Toaster } from "@/components/ui/sonner";
 
 import "./globals.css";
 
@@ -34,7 +35,8 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <main>{children}</main>
+          <Toaster position="top-right" expand={true} richColors />
         </ThemeProvider>
       </body>
     </html>
